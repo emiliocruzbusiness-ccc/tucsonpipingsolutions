@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tucson Piping Solutions LLC — Commercial Plumbing &amp; Piping | Arizona</title>
+<meta name="description" content="Tucson Piping Solutions LLC is a family-owned commercial plumbing and piping contractor serving the state of Arizona. Union-strong craftsmanship. Licensed, bonded, and insured. ROC #366466." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --pine:    #16341f;   /* deepest green — headers, footer */
+    --green:   #2d6a4f;   /* working green — primary brand */
+    --green-2: #40916c;   /* lighter green — accents, hovers */
+    --steel:   #2b2f33;   /* charcoal steel — body headings */
+    --slate:   #555b61;   /* mid gray — body text */
+    --line:    #d7dad6;   /* hairline gray */
+    --mist:    #eef0ec;   /* light gray background */
+    --paper:   #f7f8f6;   /* near-white panel */
+    --white:   #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--slate);
+    background: var(--paper);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+    color: var(--steel);
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    font-weight: 600;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .wrap { width: min(1120px, 92vw); margin: 0 auto; }
+
+  .eyebrow {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--green);
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(247,248,246,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.85rem 0;
+  }
+  .brand { display: flex; align-items: center; gap: 0.7rem; }
+  .brand-mark {
+    width: 38px; height: 38px; flex: none;
+  }
+  .brand-text { display: flex; flex-direction: column; line-height: 1.05; }
+  .brand-name {
+    font-family: 'Oswald', sans-serif; font-weight: 700;
+    font-size: 1.05rem; color: var(--pine); letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .brand-sub {
+    font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--green); font-weight: 600;
+  }
+  .nav-links { display: flex; align-items: center; gap: 1.6rem; }
+  .nav-links a {
+    font-family: 'Oswald', sans-serif; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.85rem;
+    color: var(--steel);
+  }
+  .nav-links a:hover { color: var(--green); }
+  .nav-cta {
+    background: var(--green); color: var(--white) !important;
+    padding: 0.55rem 1.1rem; border-radius: 2px;
+  }
+  .nav-cta:hover { background: var(--pine); color: var(--white) !important; }
+  .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 6px; }
+  .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--steel); margin: 5px 0; transition: 0.25s; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background:
+      linear-gradient(180deg, rgba(22,52,31,0.0) 0%, rgba(22,52,31,0.0) 100%),
+      var(--pine);
+    color: #e9ede9;
+    position: relative; overflow: hidden;
+  }
+  .hero-grid {
+    display: grid; grid-template-columns: 1.15fr 0.85fr;
+    gap: 2rem; align-items: center;
+    padding: 4.5rem 0 4.8rem;
+  }
+  .hero .eyebrow { color: var(--green-2); }
+  .hero h1 {
+    color: var(--white);
+    font-size: clamp(2.4rem, 5vw, 3.9rem);
+    font-weight: 700;
+    margin: 0.9rem 0 1.1rem;
+    text-transform: uppercase;
+  }
+  .hero h1 .accent { color: var(--green-2); }
+  .hero p.lead {
+    color: #c8d2c9; font-size: 1.12rem; max-width: 36ch; margin-bottom: 1.8rem;
+  }
+  .hero-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+  .btn {
+    font-family: 'Oswald', sans-serif; text-transform: uppercase;
+    letter-spacing: 0.08em; font-weight: 600; font-size: 0.9rem;
+    padding: 0.8rem 1.5rem; border-radius: 2px; display: inline-block;
+    transition: 0.2s; cursor: pointer; border: 2px solid transparent;
+  }
+  .btn-primary { background: var(--green-2); color: var(--pine); }
+  .btn-primary:hover { background: var(--white); }
+  .btn-ghost { border-color: rgba(255,255,255,0.35); color: var(--white); }
+  .btn-ghost:hover { border-color: var(--green-2); color: var(--green-2); }
+
+  /* Signature: isometric pipe run */
+  .hero-art { position: relative; }
+  .hero-art svg { width: 100%; height: auto; display: block; }
+
+  .hero-tags {
+    display: flex; gap: 1.4rem; flex-wrap: wrap;
+    margin-top: 2.2rem; padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.14);
+  }
+  .hero-tags span {
+    font-family: 'Oswald', sans-serif; text-transform: uppercase;
+    letter-spacing: 0.1em; font-size: 0.82rem; color: #b9c4ba;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .hero-tags span::before {
+    content: ""; width: 7px; height: 7px; background: var(--green-2);
+    display: inline-block; transform: rotate(45deg);
+  }
+
+  /* ---------- Credential strip ---------- */
+  .strip {
+    background: var(--steel); color: #e7e9e7;
+  }
+  .strip-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem; padding: 1.1rem 0;
+  }
+  .strip-item {
+    font-family: 'Oswald', sans-serif; text-transform: uppercase;
+    letter-spacing: 0.12em; font-size: 0.92rem; font-weight: 500;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .strip-item strong { color: var(--green-2); font-weight: 700; }
+  .strip-item svg { width: 18px; height: 18px; flex: none; }
+
+  /* ---------- Section scaffolding ---------- */
+  section.block { padding: 5rem 0; }
+  .block.alt { background: var(--mist); }
+  .section-head { max-width: 60ch; margin-bottom: 2.6rem; }
+  .section-head h2 {
+    font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+    margin: 0.7rem 0 0.8rem; text-transform: uppercase;
+  }
+  .section-head p { font-size: 1.05rem; }
+
+  /* ---------- Services ---------- */
+  .svc-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem;
+  }
+  .svc {
+    background: var(--white); border: 1px solid var(--line);
+    border-top: 3px solid var(--green);
+    padding: 1.7rem 1.5rem; transition: 0.2s;
+  }
+  .svc:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(22,52,31,0.10); }
+  .svc-ico {
+    width: 42px; height: 42px; color: var(--green); margin-bottom: 0.9rem;
+  }
+  .svc h3 { font-size: 1.18rem; margin-bottom: 0.45rem; color: var(--pine); }
+  .svc p { font-size: 0.96rem; }
+
+  /* ---------- Union / craft ---------- */
+  .union-grid {
+    display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 3rem; align-items: center;
+  }
+  .union-card {
+    background: var(--pine); color: #e9ede9; padding: 2.4rem;
+    position: relative; overflow: hidden;
+  }
+  .union-card .badge {
+    display: inline-block; font-family: 'Oswald', sans-serif;
+    text-transform: uppercase; letter-spacing: 0.14em; font-weight: 600;
+    font-size: 0.82rem; color: var(--pine); background: var(--green-2);
+    padding: 0.35rem 0.8rem; border-radius: 2px; margin-bottom: 1.2rem;
+  }
+  .union-card .big {
+    font-family: 'Oswald', sans-serif; font-weight: 700; color: var(--white);
+    font-size: clamp(3rem, 7vw, 4.6rem); line-height: 0.95;
+  }
+  .union-card .big small {
+    display: block; font-size: 1rem; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--green-2); margin-top: 0.4rem;
+    font-weight: 500;
+  }
+  .union-card hr { border: 0; border-top: 1px solid rgba(255,255,255,0.16); margin: 1.6rem 0; }
+  .union-card p { color: #c8d2c9; }
+
+  .union-points { list-style: none; }
+  .union-points li {
+    display: flex; gap: 0.9rem; padding: 0.9rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .union-points li:last-child { border-bottom: 0; }
+  .union-points .pt-ico { color: var(--green); flex: none; width: 26px; height: 26px; margin-top: 2px; }
+  .union-points h3 { font-size: 1.1rem; color: var(--pine); margin-bottom: 0.15rem; }
+  .union-points p { font-size: 0.96rem; }
+
+  /* ---------- Service area ---------- */
+  .area { text-align: center; }
+  .area .eyebrow { display: block; margin-bottom: 0.6rem; }
+  .area h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); text-transform: uppercase; margin-bottom: 0.7rem; }
+  .area p { max-width: 52ch; margin: 0 auto 2rem; font-size: 1.05rem; }
+  .area-list {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem;
+  }
+  .area-list span {
+    font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.06em;
+    font-size: 0.86rem; color: var(--steel);
+    border: 1px solid var(--line); background: var(--white);
+    padding: 0.5rem 1rem; border-radius: 2px;
+  }
+
+  /* ---------- Contact / CTA ---------- */
+  .contact {
+    background: var(--steel); color: #e7e9e7;
+  }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+    padding: 4.5rem 0;
+  }
+  .contact h2 { color: var(--white); font-size: clamp(2rem, 4vw, 2.8rem); text-transform: uppercase; }
+  .contact .eyebrow { color: var(--green-2); }
+  .contact p.lead { color: #bcc1bd; margin: 0.8rem 0 1.6rem; font-size: 1.08rem; }
+  .contact-info { list-style: none; }
+  .contact-info li {
+    display: flex; align-items: center; gap: 0.9rem;
+    padding: 0.7rem 0; font-size: 1.02rem;
+  }
+  .contact-info a:hover { color: var(--green-2); }
+  .contact-info .ci-ico { color: var(--green-2); width: 22px; height: 22px; flex: none; }
+  .contact-info .label {
+    font-family: 'Oswald', sans-serif; text-transform: uppercase;
+    letter-spacing: 0.1em; font-size: 0.72rem; color: #8d938e; display: block;
+  }
+  .contact-card {
+    background: var(--pine); padding: 2.4rem; border-top: 4px solid var(--green-2);
+  }
+  .contact-card h3 { color: var(--white); font-size: 1.3rem; margin-bottom: 1rem; text-transform: uppercase; }
+  .contact-card .btn-primary { width: 100%; text-align: center; margin-top: 0.4rem; }
+  .contact-card .note { color: #a9b3aa; font-size: 0.86rem; margin-top: 1rem; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background: var(--pine); color: #aebbb0; padding: 2.6rem 0;
+  }
+  .foot {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+    gap: 1rem;
+  }
+  .foot .brand-name { color: var(--white); }
+  .foot .roc {
+    font-family: 'Oswald', sans-serif; letter-spacing: 0.08em;
+    text-transform: uppercase; font-size: 0.9rem; color: #cdd6ce;
+  }
+  .foot .roc strong { color: var(--green-2); }
+  .foot small { color: #889389; font-size: 0.8rem; }
+
+  /* ---------- Reveal animation ---------- */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 860px) {
+    .hero-grid { grid-template-columns: 1fr; padding: 3.2rem 0 3.5rem; }
+    .hero-art { order: -1; max-width: 360px; }
+    .svc-grid { grid-template-columns: 1fr 1fr; }
+    .union-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .nav-links {
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: var(--paper); border-bottom: 1px solid var(--line);
+      flex-direction: column; align-items: stretch; gap: 0;
+      padding: 0.5rem 0; display: none;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 0.85rem 4vw; }
+    .nav-cta { margin: 0.5rem 4vw; text-align: center; }
+    .nav-toggle { display: block; }
+  }
+  @media (max-width: 520px) {
+    .svc-grid { grid-template-columns: 1fr; }
+    .strip-inner { justify-content: flex-start; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { transition: none; opacity: 1; transform: none; }
+    .svc:hover { transform: none; }
+  }
+
+  :focus-visible { outline: 3px solid var(--green-2); outline-offset: 2px; }
+</style>
+<noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Tucson Piping Solutions home">
+      <svg class="brand-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Pipe-flange / bolt-head mark -->
+        <path d="M24 2.5 41.6 12.6v22.8L24 45.5 6.4 35.4V12.6z" fill="#16341f"/>
+        <circle cx="24" cy="24" r="11" fill="none" stroke="#40916c" stroke-width="3"/>
+        <circle cx="24" cy="24" r="4.6" fill="none" stroke="#2d6a4f" stroke-width="2.6"/>
+        <circle cx="24" cy="11.5" r="1.9" fill="#40916c"/>
+        <circle cx="34.8" cy="17.75" r="1.9" fill="#40916c"/>
+        <circle cx="34.8" cy="30.25" r="1.9" fill="#40916c"/>
+        <circle cx="24" cy="36.5" r="1.9" fill="#40916c"/>
+        <circle cx="13.2" cy="30.25" r="1.9" fill="#40916c"/>
+        <circle cx="13.2" cy="17.75" r="1.9" fill="#40916c"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Tucson Piping Solutions</span>
+        <span class="brand-sub">Commercial Plumbing &amp; Piping</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#craft">Why Us</a>
+      <a href="#area">Service Area</a>
+      <a class="nav-cta" href="#contact">Request a Bid</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Family Owned &middot; Union Strong &middot; Arizona</span>
+      <h1>Commercial piping done <span class="accent">right the first time</span></h1>
+      <p class="lead">Tucson Piping Solutions LLC builds and services commercial plumbing and piping systems across the state of Arizona — backed by journeyman pipefitting craftsmanship you can trust.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Request a Bid</a>
+        <a class="btn btn-ghost" href="#services">View Services</a>
+      </div>
+    </div>
+
+    <!-- Signature: isometric pipe run -->
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <defs>
+          <linearGradient id="pipeA" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#52b083"/>
+            <stop offset="1" stop-color="#2d6a4f"/>
+          </linearGradient>
+          <linearGradient id="pipeB" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#40916c"/>
+            <stop offset="1" stop-color="#1f4f38"/>
+          </linearGradient>
+        </defs>
+        <!-- subtle grid -->
+        <g stroke="#214a2f" stroke-width="1" opacity="0.55">
+          <path d="M0 80 L360 0"/><path d="M0 160 L360 80"/><path d="M0 240 L360 160"/><path d="M0 320 L360 240"/>
+          <path d="M60 320 L60 14"/><path d="M150 320 L150 -30"/><path d="M240 320 L240 -10"/><path d="M330 290 L330 0"/>
+        </g>
+        <!-- main pipe run -->
+        <path d="M30 250 L150 190 L150 90 L270 30" stroke="url(#pipeA)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M30 250 L150 190 L150 90 L270 30" stroke="#1a3d2a" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" opacity="0.0"/>
+        <!-- inner highlight -->
+        <path d="M30 250 L150 190 L150 90 L270 30" stroke="#bfe6d2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+        <!-- branch -->
+        <path d="M150 190 L260 135" stroke="url(#pipeB)" stroke-width="16" stroke-linecap="round"/>
+        <!-- flanges / joints -->
+        <g>
+          <circle cx="150" cy="190" r="15" fill="#2d6a4f" stroke="#bfe6d2" stroke-width="2"/>
+          <circle cx="150" cy="90" r="15" fill="#2d6a4f" stroke="#bfe6d2" stroke-width="2"/>
+          <circle cx="30" cy="250" r="13" fill="#40916c" stroke="#bfe6d2" stroke-width="2"/>
+          <circle cx="270" cy="30" r="13" fill="#40916c" stroke="#bfe6d2" stroke-width="2"/>
+          <circle cx="260" cy="135" r="11" fill="#40916c" stroke="#bfe6d2" stroke-width="2"/>
+        </g>
+        <!-- valve wheel -->
+        <g transform="translate(270,30)">
+          <circle r="9" fill="none" stroke="#bfe6d2" stroke-width="2.4"/>
+          <path d="M-12 0H12M0 -12V12" stroke="#bfe6d2" stroke-width="2.4"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CREDENTIAL STRIP ================= -->
+<div class="strip">
+  <div class="wrap strip-inner">
+    <div class="strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2"><path d="M9 12l2 2 4-4M12 3l7 3v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Licensed
+    </div>
+    <div class="strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2"><path d="M12 3l7 3v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Bonded
+    </div>
+    <div class="strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2"><path d="M12 3l7 3v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Insured
+    </div>
+    <div class="strip-item">ROC&nbsp;License&nbsp;<strong>#366466</strong></div>
+  </div>
+</div>
+
+<!-- ================= SERVICES ================= -->
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Commercial plumbing &amp; piping services</h2>
+      <p>From the ground up or service-and-repair, we handle the piping that keeps commercial and industrial facilities running.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <svg class="svc-ico" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 22v-6a6 6 0 0 1 6-6h4" stroke-linecap="round"/><path d="M16 10h4a6 6 0 0 1 6 6v6" stroke-linecap="round"/><circle cx="6" cy="24" r="2.5"/><circle cx="26" cy="24" r="2.5"/></svg>
+        <h3>Commercial Plumbing</h3>
+        <p>New construction, tenant improvements, and full plumbing systems for commercial buildings and facilities.</p>
+      </article>
+      <article class="svc reveal">
+        <svg class="svc-ico" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 16h7l3-6 4 12 3-6h7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Process &amp; Mechanical Piping</h3>
+        <p>Process piping, mechanical and hydronic systems, and equipment connections built to spec.</p>
+      </article>
+      <article class="svc reveal">
+        <svg class="svc-ico" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 23l5-5m-5 5-3 3m3-3 2 2m6-16 5 5m-5-5 3-3m-3 3-2-2M11 21l10-10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Pipefitting &amp; Welding</h3>
+        <p>Precision pipefitting and welded joints from a journeyman fitter — carbon steel, copper, and more.</p>
+      </article>
+      <article class="svc reveal">
+        <svg class="svc-ico" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="6" y="5" width="20" height="22" rx="2"/><path d="M11 11h10M11 16h10M11 21h6" stroke-linecap="round"/></svg>
+        <h3>System Design-Build</h3>
+        <p>Plan-and-spec coordination to install clean, code-compliant systems that pass inspection.</p>
+      </article>
+      <article class="svc reveal">
+        <svg class="svc-ico" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 7a5 5 0 0 0-6.5 6.5L7 20l5 5 6.5-6.5A5 5 0 0 0 25 12l-3 3-3-3 3-3a5 5 0 0 0-2-2z" stroke-linejoin="round"/></svg>
+        <h3>Repair &amp; Retrofit</h3>
+        <p>Diagnostics, repairs, and retrofits for existing piping — minimizing downtime for your operation.</p>
+      </article>
+      <article class="svc reveal">
+        <svg class="svc-ico" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="16" cy="16" r="11"/><path d="M16 9v7l5 3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Service &amp; Maintenance</h3>
+        <p>Scheduled maintenance and responsive service to keep your facility's systems reliable.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= UNION / CRAFT ================= -->
+<section class="block alt" id="craft">
+  <div class="wrap union-grid">
+    <div class="union-card reveal">
+      <span class="badge">Union Strong</span>
+      <div class="big">20+<small>Years Pipefitting</small></div>
+      <hr />
+      <p>Our lead is a union member with more than two decades of pipefitting experience — the kind of skill and standards that come from years on the tools, not shortcuts.</p>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Why Choose Us</span>
+      <div class="section-head" style="margin-bottom:1.4rem;">
+        <h2>Built on craft, family, and standards</h2>
+      </div>
+      <ul class="union-points">
+        <li>
+          <svg class="pt-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><h3>Union Craftsmanship</h3><p>Work performed to the trade's highest standards by experienced, skilled hands.</p></div>
+        </li>
+        <li>
+          <svg class="pt-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><h3>Family Owned &amp; Operated</h3><p>A local Arizona business where our name and reputation are on every job.</p></div>
+        </li>
+        <li>
+          <svg class="pt-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><h3>Statewide Availability</h3><p>Open for commercial work throughout the state of Arizona.</p></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE AREA ================= -->
+<section class="block area" id="area">
+  <div class="wrap reveal">
+    <span class="eyebrow">Where We Work</span>
+    <h2>Serving the state of Arizona</h2>
+    <p>Based in Tucson and available for commercial piping projects across Arizona. If you have a job in the state, we'd like to bid it.</p>
+    <div class="area-list">
+      <span>Tucson</span>
+      <span>Phoenix</span>
+      <span>Marana</span>
+      <span>Oro Valley</span>
+      <span>Casa Grande</span>
+      <span>Nogales</span>
+      <span>Sierra Vista</span>
+      <span>Statewide AZ</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Let's talk about your project</h2>
+      <p class="lead">Bidding a commercial job in Arizona? Reach out and we'll get you a quote.</p>
+      <ul class="contact-info">
+        <li>
+          <svg class="ci-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h4l2 5-3 2a13 13 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 7a2 2 0 0 1 2-2z" stroke-linejoin="round"/></svg>
+          <span><span class="label">Phone</span><a href="tel:+15202881422">(520) 288-1422</a></span>
+        </li>
+        <li>
+          <svg class="ci-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span><span class="label">Email</span><a href="mailto:info@tucsonpipingsolutions.com">info@tucsonpipingsolutions.com</a></span>
+        </li>
+        <li>
+          <svg class="ci-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span><span class="label">Based In</span>Tucson, Arizona &middot; Serving statewide</span>
+        </li>
+      </ul>
+    </div>
+    <div class="contact-card reveal">
+      <h3>Request a Bid</h3>
+      <p style="color:#c8d2c9;">Email us your project scope, location, and timeline, and we'll respond with next steps.</p>
+      <a class="btn btn-primary" href="mailto:info@tucsonpipingsolutions.com?subject=Project%20Bid%20Request%20—%20Tucson%20Piping%20Solutions">Email Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap foot">
+    <div class="brand-text">
+      <span class="brand-name" style="font-size:1.15rem;">Tucson Piping Solutions LLC</span>
+      <small>Family-owned commercial plumbing &amp; piping &middot; Arizona</small>
+    </div>
+    <div class="roc">ROC License <strong>#366466</strong> &middot; Licensed, Bonded &amp; Insured</div>
+    <small>&copy; <span id="year"></span> Tucson Piping Solutions LLC. All rights reserved.</small>
+  </div>
+</footer>
+
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile nav
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  toggle.addEventListener('click', function () {
+    var open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { links.classList.remove('open'); toggle.setAttribute('aria-expanded', false); });
+  });
+
+  // Scroll reveal
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  }
+</script>
+</body>
+</html>
